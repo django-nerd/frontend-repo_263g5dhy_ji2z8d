@@ -1,4 +1,4 @@
-import { Menu, X, PhoneCall } from "lucide-react"
+import { Menu, X, PhoneCall, PawPrint } from "lucide-react"
 import { useState } from "react"
 
 export default function Navbar() {
@@ -16,10 +16,13 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <a href="#" className="flex items-center gap-3 group">
-            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white grid place-items-center shadow-lg shadow-blue-600/20">N</div>
+            <div className="relative h-9 w-9 rounded-xl bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-amber-500 text-white grid place-items-center shadow-lg shadow-indigo-600/20">
+              <PawPrint className="h-5 w-5" />
+              <span className="absolute -inset-0.5 rounded-xl bg-white/10 blur-sm" />
+            </div>
             <div>
               <p className="text-slate-900 font-bold leading-none">NFS Rápida</p>
-              <p className="text-xs text-slate-500 leading-none">Emita NFS-e em minutos</p>
+              <p className="text-xs text-slate-500 leading-none">Velocidade felina. Segurança de manada.</p>
             </div>
           </a>
 
@@ -35,7 +38,7 @@ export default function Navbar() {
             <a href="#contato" className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors">
               <PhoneCall className="h-4 w-4" /> Fale com vendas
             </a>
-            <a href="#cta" className="inline-flex items-center rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-600/30 hover:shadow-indigo-600/30 transition-all">
+            <a href="#cta" className="inline-flex items-center rounded-lg bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-amber-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-600/30 hover:shadow-amber-500/30 transition-all">
               Começar grátis
             </a>
           </div>
@@ -53,7 +56,7 @@ export default function Navbar() {
                   {item.label}
                 </a>
               ))}
-              <a href="#cta" className="rounded-md px-3 py-2 text-white bg-gradient-to-br from-blue-600 to-indigo-600 text-center font-medium">
+              <a href="#cta" className="rounded-md px-3 py-2 text-white bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-amber-500 text-center font-medium">
                 Começar grátis
               </a>
             </div>
